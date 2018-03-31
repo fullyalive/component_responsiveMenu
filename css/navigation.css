@@ -86,4 +86,9 @@ input[type="checkbox"]:checked + label:before {
   .menu .mobile-menu-hamburger {
     display: none;
   }
+
+  #mobile-menu__clicked {
+    position: absolute;
+    top: -2000px;
+  }
 }
