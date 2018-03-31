@@ -16,20 +16,25 @@
   padding: 8px;
 }
 
+.style-nav .mobile-menu__bars {
+  display: none;
+}
+
 input[type="checkbox"] {
   display: none;
 }
 
 input[type="checkbox"]:checked ~ ul {
-  display: none;
+  display: flex;
+  flex-direction: column;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"] + label:before {
   content: "\f039";
   font-family: FontAwesome;
 }
 input[type="checkbox"]:checked + label:before {
-  content: "\f039";
+  content: "\f00d";
   font-family: FontAwesome;
 }
 
