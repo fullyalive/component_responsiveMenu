@@ -55,17 +55,17 @@ input[type="checkbox"]:checked + label:before {
 
 .mobile-menu__clicked {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
-  background-color: #efefef;
+  height: 100vh;
 }
 
 .mobile-menu__clicked .mobile-menu-hamburger__bar {
-  padding: 10px;
+  margin: 0 30px;
+  padding: 20px 35px;
+  font-size: 20px;
   font-weight: 600;
+  border-bottom: 1px solid #efefef;
 }
 
 /* Tablet View */
