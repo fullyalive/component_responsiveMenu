@@ -9,18 +9,18 @@
   display: flex;
 }
 
-.menuul li a {
+.menu ul li a {
   color: #481559;
   display: block;
   text-align: center;
   padding: 8px;
 }
 
-.menu.desktop-menu {
+.menu .desktop-menu {
   display: none;
 }
 
-.menu.mobile-menu {
+.menu .mobile-menu {
   display: flex;
   align-items: center;
 }
@@ -60,28 +60,33 @@ input[type="checkbox"]:checked + label:before {
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: yellow;
+  background-color: #efefef;
+}
+
+.mobile-menu__clicked .mobile-menu-hamburger__bar {
+  padding: 10px;
+  font-weight: 600;
 }
 
 /* Tablet View */
 
 @media (min-width: 768px) {
-  .menuul li {
+  .menu ul li {
     padding: 8px;
   }
 
-  .menuul {
+  .menu ul {
     flex-direction: row;
   }
 
-  .menu.desktop-menu {
+  .menu .desktop-menu {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .menu.mobile-menu-basic,
-  .menu.mobile-menu-hamburger {
+  .menu .mobile-menu-basic,
+  .menu .mobile-menu-hamburger {
     display: none;
   }
 }
