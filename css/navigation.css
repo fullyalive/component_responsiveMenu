@@ -3,12 +3,8 @@
   margin: 0 auto;
 }
 
-.style-nav ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.style-nav .desktop-menu {
+  display: none;
 }
 
 .style-nav ul li a {
@@ -20,6 +16,14 @@
   padding: 8px;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ ul {
+  display: none;
+}
+
 /* Tablet View */
 
 @media (min-width: 768px) {
@@ -29,5 +33,15 @@
 
   .style-nav ul {
     flex-direction: row;
+  }
+
+  .style-nav .desktop-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .style-nav .mobile-menu {
+    display: none;
   }
 }
