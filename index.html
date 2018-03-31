@@ -9,23 +9,29 @@
   <title>responsiveMenu</title>
 </head>
 <body>
-  <header>
+  <header class="top-header">
     <img class="style-logo" src="images/logo.png">
     <nav class="style-nav">
       <ul class="desktop-menu">
-        <li><a href=""></a><i class="fa fa-search"></i></li>
-        <li><a href=""></a>community</li>
-        <li><a href=""></a>products</li>
-        <li><a href=""></a>login</li>
+        <li><a href=""><i class="fa fa-search"></i></a></li>
+        <li><a href="">community</a></li>
+        <li><a href="">products</a></li>
+        <li><a href="">login</a></li>
       </ul>
       <ul class="mobile-menu">
-        <input type="checkbox" id="root">
-        <label for="root"></label>
-        <ul class="mobile-menu__bars">
-          <li><a href=""></a><i class="fa fa-search"></i></li>
-          <li><a href=""></a>community</li>
-          <li><a href=""></a>products</li>
-          <li><a href=""></a>login</li>
+        <ul class="mobile-menu-basic">
+          <li><a href=""><i class="fa fa-search"></i></a></li>
+          <li><a href="">login</a></li>
+        </ul>
+        <ul class="mobile-menu-hamburger">
+          <input type="checkbox" id="hamburger">
+          <label for="hamburger"></label>
+          <ul class="mobile-menu-hamburger__bars">
+            <li><a href=""><i class="fa fa-search"></i></a></li>
+            <li><a href="">community</a></li>
+            <li><a href="">products</a></li>
+            <li><a href="">login</a></li>
+          </ul>
         </ul>
       </ul>
     </nav>
