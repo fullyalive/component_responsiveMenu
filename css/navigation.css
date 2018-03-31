@@ -5,13 +5,29 @@
 
 .style-nav ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .style-nav ul li a {
   text-decoration: none;
   color: #481559;
-  text-align: center;
   display: block;
+  text-align: center;
   text-transform: uppercase;
   padding: 8px;
+}
+
+/* Tablet View */
+
+@media (min-width: 768px) {
+  .style-nav ul li {
+    padding: 8px;
+  }
+
+  .style-nav ul {
+    flex-direction: row;
+  }
 }
