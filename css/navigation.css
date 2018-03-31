@@ -24,6 +24,15 @@ input[type="checkbox"]:checked ~ ul {
   display: none;
 }
 
+input[type="checkbox"]:checked + label {
+  content: "\f039";
+  font-family: FontAwesome;
+}
+input[type="checkbox"]:checked + label:before {
+  content: "\f039";
+  font-family: FontAwesome;
+}
+
 /* Tablet View */
 
 @media (min-width: 768px) {
