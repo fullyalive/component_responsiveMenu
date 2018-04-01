@@ -18,6 +18,7 @@
 
 .menu .desktop-menu {
   display: none;
+  font-size: 15px;
 }
 
 .menu .mobile-menu {
@@ -27,6 +28,7 @@
 
 .mobile-menu .mobile-menu-basic {
   display: flex;
+  font-size: 15px;
 }
 
 .mobile-menu .mobile-menu-hamburger {
