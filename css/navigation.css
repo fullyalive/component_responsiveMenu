@@ -83,9 +83,14 @@ input[type="checkbox"]:checked + label:before {
   padding: 10px;
 }
 
-.show {
+.title_selected {
+  border-bottom: 1px solid #efefef;
+}
+
+.content_selected {
   display: block;
 }
+
 /* Tablet View */
 
 @media (min-width: 768px) {
