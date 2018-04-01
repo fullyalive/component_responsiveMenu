@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <title>responsiveMenu</title>
 
-  <script>
-  function showMenu() {
+<script>
+function showMenu() {
   const btn = document.getElementById("mobile-menu__clicked");
   if (btn.style.display === "block") {
     btn.style.display = "none";
@@ -17,7 +17,8 @@
     btn.style.display = "block";
   }
 }
-</script>
+</script> 
+
 </head>
 <body>
   <header class="top-header">
@@ -53,7 +54,30 @@
         <li class="mobile-menu-hamburger__bar"><a href="">SIGN UP</a></li>
         <li class="mobile-menu-hamburger__bar"><a href="">LOG IN</a></li>
       </ul>
-      <div class="ad-banner"></div>
+      <div class="ad-banner">
+        <div class="ad-banner__sections">
+          <div class="ad-banner__section">
+            <div class="ad-banner__section-title">
+              <h1>Title1</h1>
+            </div>
+          </div>
+          <div class="ad-banner__section">
+            <div class="ad-banner__section-title">
+              <h1>Title2</h1>
+            </div>
+          </div>
+          <div class="ad-banner__section">
+            <div class="ad-banner__section-title">
+              <h1>title3</h1>
+            </div>
+          </div>
+        </div>
+        <div class="ad-banner__contents">
+          <div class="ad-banner__content section1">1</div>
+          <div class="ad-banner__content section2">2</div>
+          <div class="ad-banner__content section3">3</div>
+        </div>
+      </div>
     </nav>
     <main></main>
     <footer></footer>

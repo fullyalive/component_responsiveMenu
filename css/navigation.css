@@ -67,6 +67,25 @@ input[type="checkbox"]:checked + label:before {
   border-bottom: 1px solid #efefef;
 }
 
+.ad-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.ad-banner .ad-banner__sections {
+  display: flex;
+  justify-content: center;
+}
+
+.ad-banner__sections .ad-banner__section {
+  padding: 10px;
+}
+
+.show {
+  display: block;
+}
 /* Tablet View */
 
 @media (min-width: 768px) {
