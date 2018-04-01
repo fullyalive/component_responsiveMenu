@@ -75,16 +75,6 @@
   }
 }
 
-const titles = document.getElementsByClassName("ad-banner__section-title");
-for (let i = 0; i < titles.length; i++) {
-  titles[i].addEventListener("click", function() {
-    const current = document.getElementsByClassName("title_selected");
-
-    current[0].className = current[0].className.replace(" title_selected", "");
-    this.className += " title_selected";
-  });
-}
-
 function openContent(evt, nthContent) {
   let i;
   let tabcontent;
