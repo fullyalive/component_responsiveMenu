@@ -63,9 +63,9 @@
           </div>
         </div>
         <div class="ad-banner__contents">
-          <div class="ad-banner__content section">1</div>
-          <div class="ad-banner__content section">2</div>
-          <div class="ad-banner__content section">3</div>
+          <div class="ad-banner__content content_selected">1</div>
+          <div class="ad-banner__content">2</div>
+          <div class="ad-banner__content">3</div>
         </div>
       </div>
     </nav>
@@ -82,9 +82,11 @@
 }
 
 const titles = document.getElementsByClassName("ad-banner__section-title");
+
 for (let i = 0; i < titles.length; i++) {
   titles[i].addEventListener("click", function() {
     const current = document.getElementsByClassName("title_selected");
+
     current[0].className = current[0].className.replace(" title_selected", "");
     this.className += " title_selected";
   });
