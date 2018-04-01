@@ -8,19 +8,10 @@
   <link rel="stylesheet" href="css/style.css">
   <title>responsiveMenu</title>
 
-<script>
-function showMenu() {
-  const btn = document.getElementById("mobile-menu__clicked");
-  if (btn.style.display === "block") {
-    btn.style.display = "none";
-  } else {
-    btn.style.display = "block";
-  }
-}
-</script>
+
 </head>
 <body>
-  <header class="top-header">
+  <header id="top-header">
     <a href="index.html">
       <img class="style-logo" src="images/logo.png">
     </a>
@@ -53,10 +44,10 @@ function showMenu() {
         <li class="mobile-menu-hamburger__bar"><a href="">SIGN UP</a></li>
         <li class="mobile-menu-hamburger__bar"><a href="">LOG IN</a></li>
       </ul>
-      <div class="ad-banner">
+      <div id="ad-banner">
         <div class="ad-banner__sections">
           <div class="ad-banner__section">
-            <div class="ad-banner__section-title">
+            <div class="ad-banner__section-title title_selected">
               <h1>Title1</h1>
             </div>
           </div>
@@ -80,5 +71,24 @@ function showMenu() {
     </nav>
     <main></main>
     <footer></footer>
+    <script>
+    function showMenu() {
+  const btn = document.getElementById("mobile-menu__clicked");
+  if (btn.style.display === "block") {
+    btn.style.display = "none";
+  } else {
+    btn.style.display = "block";
+  }
+}
+
+const titles = document.getElementsByClassName("ad-banner__section-title");
+for (let i = 0; i < titles.length; i++) {
+  titles[i].addEventListener("click", function() {
+    const current = document.getElementsByClassName("title_selected");
+    current[0].className = current[0].className.replace(" title_selected", "");
+    this.className += " title_selected";
+  });
+}
+</script>
 </body>
 </html>
