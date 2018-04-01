@@ -44,31 +44,25 @@
         <li class="mobile-menu-hamburger__bar"><a href="">SIGN UP</a></li>
         <li class="mobile-menu-hamburger__bar"><a href="">LOG IN</a></li>
       </ul>
-      <div id="ad-banner">
-        <div class="ad-banner__sections">
-          <div class="ad-banner__section">
-            <div class="ad-banner__section-title title_selected">
-              <h1>Title1</h1>
-            </div>
-          </div>
-          <div class="ad-banner__section">
-            <div class="ad-banner__section-title">
-              <h1>Title2</h1>
-            </div>
-          </div>
-          <div class="ad-banner__section">
-            <div class="ad-banner__section-title">
-              <h1>Title3</h1>
-            </div>
-          </div>
+
+      <div class="ad-banner__titles">
+        <div class="ad-banner__title title_selected" onclick="openContent(event, 'Title1')">Title1</div>
+        <div class="ad-banner__title" onclick="openContent(event, 'Title2')">Title2</div>
+        <div class="ad-banner__title" onclick="openContent(event, 'Title3')">Title3</div>
+      </div>
+      <div class="ad-banner__tabs">
+        <div id="Title1" class="tabcontent content_selected">
+          <h1>Content1</h1>
         </div>
-        <div class="ad-banner__contents">
-          <div class="ad-banner__content content_selected">1</div>
-          <div class="ad-banner__content">2</div>
-          <div class="ad-banner__content">3</div>
+        <div id="Title2" class="tabcontent">
+          <h1>Content2</h1>
+        </div>
+        <div id="Title3" class="tabcontent">
+          <h1>Content3</h1>
         </div>
       </div>
     </nav>
+
     <main></main>
     <footer></footer>
     <script>
@@ -82,7 +76,6 @@
 }
 
 const titles = document.getElementsByClassName("ad-banner__section-title");
-
 for (let i = 0; i < titles.length; i++) {
   titles[i].addEventListener("click", function() {
     const current = document.getElementsByClassName("title_selected");
@@ -90,6 +83,25 @@ for (let i = 0; i < titles.length; i++) {
     current[0].className = current[0].className.replace(" title_selected", "");
     this.className += " title_selected";
   });
+}
+
+function openContent(evt, nthContent) {
+  let i;
+  let tabcontent;
+  let tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("ad-banner__title");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("title_selected", "");
+  }
+
+  document.getElementById(nthContent).style.display = "block";
+  evt.currentTarget.className += " title_selected";
 }
 </script>
 </body>
