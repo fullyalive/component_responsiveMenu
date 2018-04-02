@@ -12,10 +12,10 @@
 </head>
 <body>
   <header id="top-header">
-    <a href="index.html">
-      <img class="style-logo" src="images/logo.png">
-    </a>
-    <nav class="menu">
+    <nav id="desktop-menu">
+      <a href="index.html" class="service_logo" >
+        <img src="images/logo.png">
+      </a>
       <ul class="desktop-menu">
         <li><a href=""><i class="fa fa-search"></i></a></li>
         <li><a href="">Community</a></li>
@@ -32,8 +32,7 @@
         </ul>
       </ul>
     </nav>
-  </header>
-    <nav id="mobile-menu__clicked">
+    <nav id="mobile-menu">
       <div class="search-bar">
         <i class="fa fa-search"></i>
         <input type="text" placeholder="Search">
@@ -44,7 +43,6 @@
         <li class="mobile-menu-hamburger__bar"><a href="">SIGN UP</a></li>
         <li class="mobile-menu-hamburger__bar"><a href="">LOG IN</a></li>
       </ul>
-
       <div class="ad-banner__titles">
         <div class="ad-banner__title title_selected" onclick="openContent(event, 'Title1')">Title1</div>
         <div class="ad-banner__title" onclick="openContent(event, 'Title2')">Title2</div>
@@ -62,9 +60,11 @@
         </div>
       </div>
     </nav>
+  </header>
+
     <script>
     function showMenu() {
-  const btn = document.getElementById("mobile-menu__clicked");
+  const btn = document.getElementById("mobile-menu");
   if (btn.style.display === "block") {
     btn.style.display = "none";
   } else {
